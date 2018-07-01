@@ -17,7 +17,8 @@ def Add_task(TaskDesc, TaskDate):
 
 if __name__ == "__main__":
    gt = Gtasks()
-   build_tasks_list('134 Herrick Rd')
+   task_list = intput ("Enter name of list to update: ")
+   build_tasks_list(task_list)
    print ("1- Add Sunday Tasks")
    print ("2- Add multiple tasks (today's date)")
    menu = input("Selection: ")
@@ -34,3 +35,4 @@ if __name__ == "__main__":
             break     
       for line in lines: 
          Add_task(line, gettoday())
+   print ("Upload to Gtask Complete")      
