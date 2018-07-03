@@ -9,15 +9,15 @@ def gettoday(): #get today's date
    return date.today()
 
 def build_tasks_list(task_list):
-   global tasks
+   global tasks  #needs to be global so tasks can be used outside of def
    tasks=gt.get_list(task_list)
    
-def Add_task(TaskDesc, TaskDate):
+def Add_task(TaskDesc, TaskDate):  #add new task to selected list
    tasks.new_task(TaskDesc, TaskDate)
 
 if __name__ == "__main__":
    gt = Gtasks()
-   task_list = intput ("Enter name of list to update: ")
+   task_list = intput ("Enter name of list to update: ") #Needs to be existing task list at this time.
    build_tasks_list(task_list)
    print ("1- Add Sunday Tasks")
    print ("2- Add multiple tasks (today's date)")
