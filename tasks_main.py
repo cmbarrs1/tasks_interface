@@ -17,7 +17,7 @@ def Add_task(TaskDesc, TaskDate):  #add new task to selected list
 
 if __name__ == "__main__":
    gt = Gtasks()
-   task_list = intput ("Enter name of list to update: ") #Needs to be existing task list at this time.
+   task_list = input ("Enter name of list to update: ") #Needs to be existing task list at this time.
    build_tasks_list(task_list)
    print ("1- Add Sunday Tasks")
    print ("2- Add multiple tasks (today's date)")
