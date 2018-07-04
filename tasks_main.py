@@ -19,8 +19,9 @@ if __name__ == "__main__":
    gt = Gtasks()
    task_list = input ("Enter name of list to update: ") #Needs to be existing task list at this time.
    build_tasks_list(task_list)
-   print ("1- Add Sunday Tasks")
+   print ("1- Add Individual Sunday Tasks")
    print ("2- Add multiple tasks (today's date)")
+   print ("3- Add Standard Sunday Task List")
    menu = input("Selection: ")
    if menu == '1':
       task_Desc=input("Task Description: ")
@@ -35,4 +36,10 @@ if __name__ == "__main__":
             break     
       for line in lines: 
          Add_task(line, gettoday())
+   elif menu == '3':
+      Add_task('Change Robin Sheets', getnextsunday())
+      Add_task('Change Teddy Sheets', getnextsunday())
+      Add_task('Change Master Bed Sheets', getnextsuday())
+      Add_task('Vacuum Upstairs Hallway / Bedrooms', getnextsunday())
+      Add_task('Vacuum Stairs', getnextsunday())
    print ("Upload to Gtask Complete")      
